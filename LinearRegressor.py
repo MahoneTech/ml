@@ -23,7 +23,7 @@ y_eavl = np.array([7.6, 17.2, 23.6, 28.8])
 # 第二个参数用来作为线性回归模型损失模型的输入
 # 第三个参数batch_size表示每批训练数据的个数
 # 第四个参数num_epochs为epoch的次数，将训练集的所有数据都训练一遍为1次epoch
-# 低五个参数shuffle为取训练数据是顺序取还是随机取
+# 第五个参数shuffle为取训练数据是顺序取还是随机取
 train_input_fn = tf.estimator.inputs.numpy_input_fn(
     {"x": x_train}, y_train, batch_size=2, num_epochs=None, shuffle=True)
 
@@ -45,3 +45,19 @@ print("train metrics: %r" % train_metrics)
 # 使用评估数据评估一下模型，目的是验证模型的泛化性能
 eval_metrics = estimator.evaluate(input_fn=eval_input_fn)
 print("eval metrics: %s" % eval_metrics)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
